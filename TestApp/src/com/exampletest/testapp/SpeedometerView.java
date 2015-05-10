@@ -2,6 +2,7 @@ package com.exampletest.testapp;
 
 import android.animation.TypeEvaluator;
 import android.animation.ValueAnimator;
+import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -15,7 +16,6 @@ import android.os.Build;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -405,7 +405,7 @@ public class SpeedometerView extends View {
 				oval.centerY() - oval.width() * 1.1f / 2, maskPaint);
 	}
 
-	@SuppressWarnings("NewApi")
+	@SuppressLint("InlinedApi")
 	private void init() {
 		if (Build.VERSION.SDK_INT >= 11 && !isInEditMode()) {
 			setLayerType(View.LAYER_TYPE_HARDWARE, null);
